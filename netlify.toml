@@ -6,6 +6,10 @@
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
+  VITE_APP_TITLE = "Minecraft Tools"
+  VITE_APP_DESCRIPTION = "차세대 마인크래프트 도구 - 모던한 디자인과 강력한 기능"
+  VITE_APP_URL = "http://tools.emykr.xyz"
+  VITE_APP_VERSION = "2.0.0"
 
 # SPA를 위한 라우팅 설정
 [[redirects]]
