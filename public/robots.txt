@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tools.emykr.xyz/sitemap.xml
+
+# Disallow development files
+Disallow: /src/
+Disallow: /*.map
+Disallow: /node_modules/
+Disallow: /.git/
