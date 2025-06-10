@@ -37,8 +37,23 @@ git push -u origin main
    Value: [netlify-site-name].netlify.app
    ```
 
-### 4단계: HTTPS 설정
-- "Force HTTPS" 활성화 (자동으로 Let's Encrypt 인증서 발급)
+### 4단계: HTTPS 설정 (Let's Encrypt 자동)
+1. **자동 HTTPS**: Netlify가 Let's Encrypt 인증서를 자동으로 발급
+2. **Force HTTPS** 활성화:
+   - Site settings → Domain management
+   - "Force HTTPS" 토글 ON
+3. **포트 설정**: 
+   - 포트 80 (HTTP) → 자동으로 포트 443 (HTTPS)로 리다이렉트
+   - 도메인 뒤에 포트 번호 불필요 (표준 포트 사용)
+4. **HSTS 보안**: netlify.toml에서 이미 설정됨
+
+### 🔒 보안 기능 자동 적용:
+- ✅ **Let's Encrypt SSL 인증서** (무료, 자동 갱신)
+- ✅ **HTTP → HTTPS 강제 리다이렉트** (포트 80 → 443)
+- ✅ **HSTS (HTTP Strict Transport Security)**
+- ✅ **CSP (Content Security Policy)**
+- ✅ **XSS 보호**
+- ✅ **클릭재킹 방지**
 
 ## 🔧 자동 배포 설정
 

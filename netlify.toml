@@ -8,7 +8,7 @@
   NPM_VERSION = "9"
   VITE_APP_TITLE = "Minecraft Tools"
   VITE_APP_DESCRIPTION = "차세대 마인크래프트 도구 - 모던한 디자인과 강력한 기능"
-  VITE_APP_URL = "http://tools.emykr.xyz"
+  VITE_APP_URL = "https://tools.emykr.xyz"
   VITE_APP_VERSION = "2.0.0"
 
 # SPA를 위한 라우팅 설정
@@ -16,6 +16,19 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# HTTP → HTTPS 강제 리다이렉트 (포트 80 → 443)
+[[redirects]]
+  from = "http://tools.emykr.xyz/*"
+  to = "https://tools.emykr.xyz/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.tools.emykr.xyz/*"
+  to = "https://tools.emykr.xyz/:splat"
+  status = 301
+  force = true
 
 # 정적 파일 캐싱 설정
 [[headers]]
@@ -53,3 +66,5 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self';"
