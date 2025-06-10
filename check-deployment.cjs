@@ -27,9 +27,7 @@ const requiredFiles = [
   'public/icon.svg',
   'public/apple-touch-icon.svg',
   'public/og-image.svg',
-  'netlify.toml',
-  'vercel.json',
-  '.github/workflows/deploy.yml'
+  'netlify.toml'
 ];
 
 console.log('📁 필수 파일 확인:');
